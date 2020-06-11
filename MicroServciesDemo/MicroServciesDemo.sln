@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Products", "ProductsService\MicroServicesDemo.Api.Products.csproj", "{01E82D35-D943-4CA1-9B39-0716E0AEB916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesDemo.Api.Customers", "MicroServicesDemo.Api.Customers\MicroServicesDemo.Api.Customers.csproj", "{17E77128-92A1-4ADC-880A-CF410D5376B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Customers", "MicroServicesDemo.Api.Customers\MicroServicesDemo.Api.Customers.csproj", "{17E77128-92A1-4ADC-880A-CF410D5376B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesDemo.Api.Orders", "MicroServicesDemo.Api.Orders\MicroServicesDemo.Api.Orders.csproj", "{4986829D-2EF2-4DED-9135-200A2DE57618}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{17E77128-92A1-4ADC-880A-CF410D5376B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E77128-92A1-4ADC-880A-CF410D5376B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E77128-92A1-4ADC-880A-CF410D5376B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4986829D-2EF2-4DED-9135-200A2DE57618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4986829D-2EF2-4DED-9135-200A2DE57618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4986829D-2EF2-4DED-9135-200A2DE57618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4986829D-2EF2-4DED-9135-200A2DE57618}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
