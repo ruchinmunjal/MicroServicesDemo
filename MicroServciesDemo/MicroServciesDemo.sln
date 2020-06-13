@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Products", "ProductsService\MicroServicesDemo.Api.Products.csproj", "{01E82D35-D943-4CA1-9B39-0716E0AEB916}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Products", "MicroServicesDemo.Api.Products\MicroServicesDemo.Api.Products.csproj", "{01E82D35-D943-4CA1-9B39-0716E0AEB916}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Customers", "MicroServicesDemo.Api.Customers\MicroServicesDemo.Api.Customers.csproj", "{17E77128-92A1-4ADC-880A-CF410D5376B1}"
 EndProject
