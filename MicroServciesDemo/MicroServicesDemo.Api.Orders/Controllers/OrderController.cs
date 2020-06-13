@@ -8,16 +8,16 @@ namespace MicroServicesDemo.Api.Orders.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly IOrdersProvider orders;
+        private readonly IOrderProvider orders;
 
-        public OrderController(IOrdersProvider orders)
+        public OrderController(IOrderProvider orders)
         {
             this.orders = orders;
         }
-        [HttpGet]
-        public async Task<ActionResult> GetOrders()
+        [HttpGet("{customerId}")]
+        public async Task<ActionResult> GetOrdersAsync(int customerId)
         {
-            var result = await orders.GetOrders();
+            var result = await orders.GetOrdersAsync(customerId);
             if (result.IsSuccess)
             {
                 return Ok(result.Orders);
@@ -25,15 +25,6 @@ namespace MicroServicesDemo.Api.Orders.Controllers
             return NotFound();
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult> GetOrder(int id)
-        {
-            var result = await orders.GetOrder(id);
-            if (result.IsSuccess)
-            {
-                return Ok(result.Order);
-            }
-            return NotFound();
-            }
+        
     }
 }

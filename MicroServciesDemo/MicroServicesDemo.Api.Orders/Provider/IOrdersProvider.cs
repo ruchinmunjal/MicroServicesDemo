@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace MicroServicesDemo.Api.Orders.Provider
 {
-    public interface IOrdersProvider
+    public interface IOrderProvider
     {
-        Task<(bool IsSuccess, Order Order, string ErrorMessage)> GetOrder(int id);
-        Task<(bool IsSuccess, IEnumerable<Order> Orders, string ErrorMessage)> GetOrders();
+        
+        Task<(bool IsSuccess, IEnumerable<Order> Orders, string ErrorMessage)> GetOrdersAsync(int customerId);
     }
 }

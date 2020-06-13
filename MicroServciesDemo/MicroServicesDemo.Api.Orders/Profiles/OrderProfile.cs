@@ -6,9 +6,11 @@ namespace MicroServicesDemo.Api.Orders.Profiles
     {
         public OrderProfile()
         {
-            CreateMap<Db.Order,Models.Order>();
-            CreateMap<Db.OrderItem,Models.OrderItem>()
-                .ForMember(x=>x.Id,src=>src.MapFrom(z=>z.ItemId));
+            CreateMap<Db.Order,Models.Order>()
+                .ForMember(x=>x.OrderItems,src=>src.MapFrom(z=>z.Items));
+
+            CreateMap<Db.OrderItem,Models.OrderItem>();
+                
 
         }
     }

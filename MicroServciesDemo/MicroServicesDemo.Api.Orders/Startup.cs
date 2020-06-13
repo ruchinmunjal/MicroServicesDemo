@@ -26,8 +26,9 @@ namespace MicroServicesDemo.Api.Orders
             {
                 options.UseInMemoryDatabase("Orders");
             });
-            services.AddScoped<IOrdersProvider,OrdersProvider>();
             services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<IOrderProvider,OrderProvider>();
+            
             services.AddControllers();
         }
 
