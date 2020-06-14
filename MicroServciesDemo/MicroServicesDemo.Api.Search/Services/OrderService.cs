@@ -3,6 +3,7 @@ using MicroServicesDemo.Api.Search.Models;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -14,10 +15,12 @@ namespace MicroServicesDemo.Api.Search.Services
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly ILogger<OrderService> _logger;
 
+
         public OrderService(IHttpClientFactory httpClientFactory, ILogger<OrderService> logger)
         {
             _httpClientFactory = httpClientFactory;
             _logger = logger;
+
         }
         public async Task<(bool IsSuccess, IEnumerable<Order> Orders, string ErrorMessage)> GetOrderAsync(int customerId)
         {
@@ -32,7 +35,8 @@ namespace MicroServicesDemo.Api.Search.Services
                     {
                         PropertyNameCaseInsensitive = true
                     });
-                    return (true, result, null);
+                    var orders = result.ToList();
+                    return (true, orders, null);
                 }
 
                 return (false, null, response.ReasonPhrase);

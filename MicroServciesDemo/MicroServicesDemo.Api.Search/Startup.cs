@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Polly;
 using System;
 
 namespace MicroServicesDemo.Api.Search
@@ -23,11 +24,15 @@ namespace MicroServicesDemo.Api.Search
         {
             services.AddScoped<ISearchService, SearchService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddHttpClient("OrdersService", config =>
             {
                 config.BaseAddress = new Uri(Configuration["Services:Orders"]);
             });
-
+            services.AddHttpClient("ProductsService", config =>
+            {
+                config.BaseAddress = new Uri(Configuration["Services:Products"]);
+            }).AddTransientHttpErrorPolicy(p => p.WaitAndRetryAsync(5, _ => TimeSpan.FromMilliseconds(500)));
             services.AddControllers();
         }
 
