@@ -16,7 +16,7 @@ namespace MicroServicesDemo.Api.Search.Services
             var response = await _orderService.GetOrderAsync(customerId);
             if (response.IsSuccess)
             {
-                return (true, new { Orders = response });
+                return (true, new { Orders = response.Orders });
             }
 
             return (false, null);
