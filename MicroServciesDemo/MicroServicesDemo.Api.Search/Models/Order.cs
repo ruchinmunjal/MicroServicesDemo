@@ -11,5 +11,6 @@ namespace MicroServicesDemo.Api.Search.Models
 
         public int Total { get; set; }
         public List<OrderItem> OrderItems { get; set; }
+
     }
 }
