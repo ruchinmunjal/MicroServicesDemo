@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace MicroServicesDemo.Api.Search
 {
@@ -20,7 +21,13 @@ namespace MicroServicesDemo.Api.Search
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<ISearchService, SearchSevice>();
+            services.AddScoped<ISearchService, SearchService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddHttpClient("OrdersService", config =>
+            {
+                config.BaseAddress = new Uri(Configuration["Services:Orders"]);
+            });
+
             services.AddControllers();
         }
 
