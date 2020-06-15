@@ -61,7 +61,7 @@ namespace ProductsService.Providers
 
                 if (allProducts != null && allProducts.Any())
                 {
-                    _logger.LogInformation("received products");
+                    _logger?.LogInformation("received products");
                     var products = _mapper.Map<IEnumerable<Models.Product>>(allProducts);
                     return (true, products, null);
                 }
@@ -69,7 +69,7 @@ namespace ProductsService.Providers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.ToString());
+                _logger?.LogError(ex.ToString());
                 return (false, null, ex.Message);
             }
 
