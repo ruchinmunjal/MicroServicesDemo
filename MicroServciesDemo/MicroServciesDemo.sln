@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Custo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Orders", "MicroServicesDemo.Api.Orders\MicroServicesDemo.Api.Orders.csproj", "{4986829D-2EF2-4DED-9135-200A2DE57618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesDemo.Api.Search", "MicroServicesDemo.Api.Search\MicroServicesDemo.Api.Search.csproj", "{C29305B6-6DD5-4CC3-A261-4672001B642D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Search", "MicroServicesDemo.Api.Search\MicroServicesDemo.Api.Search.csproj", "{C29305B6-6DD5-4CC3-A261-4672001B642D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesDemo.Api.Products.Test", "MicroServicesDemo.Api.Products.Test\MicroServicesDemo.Api.Products.Test.csproj", "{92B64137-39C9-4BAF-80F3-1A9D8DE60618}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesDemo.Api.Products.Test", "MicroServicesDemo.Api.Products.Test\MicroServicesDemo.Api.Products.Test.csproj", "{92B64137-39C9-4BAF-80F3-1A9D8DE60618}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F4ACC0EE-035E-4573-849A-39A510BD8E32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{92B64137-39C9-4BAF-80F3-1A9D8DE60618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B64137-39C9-4BAF-80F3-1A9D8DE60618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B64137-39C9-4BAF-80F3-1A9D8DE60618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4ACC0EE-035E-4573-849A-39A510BD8E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4ACC0EE-035E-4573-849A-39A510BD8E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4ACC0EE-035E-4573-849A-39A510BD8E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4ACC0EE-035E-4573-849A-39A510BD8E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

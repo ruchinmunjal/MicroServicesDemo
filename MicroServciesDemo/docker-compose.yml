@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  microservicesdemo.api.products:
+    image: ${DOCKER_REGISTRY-}microservicesdemoapiproducts
+    build:
+      context: .
+      dockerfile: MicroServicesDemo.Api.Products\Dockerfile
+
+  microservicesdemo.api.orders:
+    image: ${DOCKER_REGISTRY-}microservicesdemoapiorders
+    build:
+      context: .
+      dockerfile: MicroServicesDemo.Api.Orders\Dockerfile
+
+
+  microservicesdemo.api.customers:
+    image: ${DOCKER_REGISTRY-}microservicesdemoapicustomers
+    build:
+      context: .
+      dockerfile: MicroServicesDemo.Api.Customers\Dockerfile
+
+
+  microservicesdemo.api.search:
+    image: ${DOCKER_REGISTRY-}microservicesdemoapisearch
+    build:
+      context: .
+      dockerfile: MicroServicesDemo.Api.Search\Dockerfile
+
