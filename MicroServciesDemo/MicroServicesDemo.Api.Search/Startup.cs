@@ -37,7 +37,7 @@ namespace MicroServicesDemo.Api.Search
             services.AddHttpClient("CustomersService", config =>
             {
                 config.BaseAddress = new Uri(Configuration["Services:Customers"]);
-            }).AddTransientHttpErrorPolicy(p => p.WaitAndRetryAsync(5, _ => TimeSpan.FromMilliseconds(500)));
+            }).AddTransientHttpErrorPolicy(p => p.WaitAndRetryAsync(5, _ => TimeSpan.FromMilliseconds(500))); //add a polly policy to retry in case of failure
             services.AddControllers();
         }
 
