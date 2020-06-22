@@ -1,0 +1,29 @@
+﻿version: "3.4"
+
+services:
+  products:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80/http"
+
+  orders:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80/http"
+
+  customers:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80/http"
+
+  search:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Services__Products=http://microservicesdemo.api.products
+      - Services__Orders=http://microservicesdemo.api.orders
+      - Services__Customers=http://microservicesdemo.api.customers
+    ports:
+      - "6004:80"
